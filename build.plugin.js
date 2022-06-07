@@ -24,6 +24,14 @@ module.exports = ({ context,onGetWebpackConfig }) => {
     }
     // console.log('====context',context.command)
 
-    // config.devtool('inline-source-map'); 
+    // config.devtool('inline-source-map');
+
+    if (process.env.NODE_ENV === 'development') {
+      // 将 sourceMap inline 来方便代理调试, 否则加载的是线上的 map 文件
+      config.devtool('inline-cheap-module-source-map');
+    }
+    // build 打包不压缩代码, 方便 debug
+    config.output.pathinfo(true);
+    config.optimization.minimize(false);
   });
 };

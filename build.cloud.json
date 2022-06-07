@@ -15,6 +15,7 @@
     "lodash": "var _",
     "@alifd/next": "var Next"
   },
+  "browserslist": "chrome >= 55",
   "polyfill": false,
   "outputDir": "dist",
   "vendor": false,

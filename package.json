@@ -11,7 +11,7 @@
   "module": "es/index.js",
   "stylePath": "style.js",
   "scripts": {
-    "start": "build-scripts start --config build.cloud.json --port 4008",
+    "start": "build-scripts start --config build.cloud.json --disable-open",
     "build": "build-scripts build && build-scripts build --config build.cloud.json",
     "cloud-build": "build-scripts build --config build.cloud.json",
     "test": "build-scripts test",
