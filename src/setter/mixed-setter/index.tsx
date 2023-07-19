@@ -136,8 +136,8 @@ function nomalizeSetters(
   ).length;
   return formattedSetters.map((item) => {
     if (item.setter === 'VariableSetter' && hasComplexSetter) {
-      item.setter = 'ExpressionSetter';
-      item.name = 'ExpressionSetter';
+      // item.setter = 'ExpressionSetter';
+      // item.name = 'ExpressionSetter';
     }
     return item;
   });
